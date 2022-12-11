@@ -13,6 +13,7 @@ At this stage of my life, I decided to start exploring a new area for myself - p
  - HTML & CSS (basic)
  - Git + GitHub
  - JavaScript (basic)
+ - Figma (basic)
 ### Code example:
 ```
 function multiply(a, b){
