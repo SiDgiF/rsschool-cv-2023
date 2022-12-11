@@ -24,6 +24,7 @@ function multiply(a, b){
 ## Experience:
 + [Resume-Dragoon](https://sidgif.github.io/Resume-Dragoon/)
 + [rsschool-cv](https://sidgif.github.io/rsschool-cv/)
++ [Marathon_5_days_5_JavaScript_projects](https://github.com/SiDgiF/Marathon_5_days_5_JavaScript_projects)
 
 ## Education:
  * __Brest State Technical University__
