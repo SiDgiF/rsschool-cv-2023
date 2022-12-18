@@ -29,8 +29,34 @@ summaryBtn.addEventListener('click', function () {
 
 })
 
+summary.addEventListener('mousemove', function () {
+
+   summary.classList.add('active');
+   skills.classList.remove('active');
+   contact.classList.remove('active');
+   code.classList.remove('active');
+   courses.classList.remove('active');
+   experience.classList.remove('active');
+   education.classList.remove('active');
+   languages.classList.remove('active');
+
+})
+
 
 skillsBtn.addEventListener('click', function () {
+
+   summary.classList.remove('active');
+   skills.classList.add('active');
+   contact.classList.remove('active');
+   code.classList.remove('active');
+   courses.classList.remove('active');
+   experience.classList.remove('active');
+   education.classList.remove('active');
+   languages.classList.remove('active');
+
+})
+
+skills.addEventListener('mousemove', function () {
 
    summary.classList.remove('active');
    skills.classList.add('active');
@@ -55,8 +81,32 @@ contactBtn.addEventListener('click', function () {
    languages.classList.remove('active');
 
 })
+contact.addEventListener('mousemove', function () {
+
+   summary.classList.remove('active');
+   skills.classList.remove('active');
+   contact.classList.add('active');
+   code.classList.remove('active');
+   courses.classList.remove('active');
+   experience.classList.remove('active');
+   education.classList.remove('active');
+   languages.classList.remove('active');
+
+})
 
 codeBtn.addEventListener('click', function () {
+
+   summary.classList.remove('active');
+   skills.classList.remove('active');
+   contact.classList.remove('active');
+   code.classList.add('active');
+   courses.classList.remove('active');
+   experience.classList.remove('active');
+   education.classList.remove('active');
+   languages.classList.remove('active');
+
+})
+code.addEventListener('mousemove', function () {
 
    summary.classList.remove('active');
    skills.classList.remove('active');
@@ -81,8 +131,32 @@ coursesBtn.addEventListener('click', function () {
    languages.classList.remove('active');
 
 })
+courses.addEventListener('mousemove', function () {
+
+   summary.classList.remove('active');
+   skills.classList.remove('active');
+   contact.classList.remove('active');
+   code.classList.remove('active');
+   courses.classList.add('active');
+   experience.classList.remove('active');
+   education.classList.remove('active');
+   languages.classList.remove('active');
+
+})
 
 experienceBtn.addEventListener('click', function () {
+
+   summary.classList.remove('active');
+   skills.classList.remove('active');
+   contact.classList.remove('active');
+   code.classList.remove('active');
+   courses.classList.remove('active');
+   experience.classList.add('active');
+   education.classList.remove('active');
+   languages.classList.remove('active');
+
+})
+experience.addEventListener('mousemove', function () {
 
    summary.classList.remove('active');
    skills.classList.remove('active');
@@ -106,6 +180,17 @@ educationBtn.addEventListener('click', function () {
    education.classList.add('active');
    languages.classList.remove('active');
 })
+education.addEventListener('mousemove', function () {
+
+   summary.classList.remove('active');
+   skills.classList.remove('active');
+   contact.classList.remove('active');
+   code.classList.remove('active');
+   courses.classList.remove('active');
+   experience.classList.remove('active');
+   education.classList.add('active');
+   languages.classList.remove('active');
+})
 
 languagesBtn.addEventListener('click', function () {
 
@@ -119,3 +204,16 @@ languagesBtn.addEventListener('click', function () {
    languages.classList.add('active');
 
 })
+languages.addEventListener('mousemove', function () {
+
+   summary.classList.remove('active');
+   skills.classList.remove('active');
+   contact.classList.remove('active');
+   code.classList.remove('active');
+   courses.classList.remove('active');
+   experience.classList.remove('active');
+   education.classList.remove('active');
+   languages.classList.add('active');
+
+})
+
