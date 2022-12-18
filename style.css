@@ -193,8 +193,15 @@ h2 {
 }
 
 h2:hover {
-   background: #168bc2;
+   background: #934022;
    transition: all 1.5s;
+   letter-spacing: 5px;
+   cursor: none;
+}
+
+.active {
+   background: #934022;
+   transition: all 2s;
    letter-spacing: 5px;
    cursor: none;
 }
