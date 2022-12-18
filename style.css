@@ -1,0 +1,229 @@
+@font-face {
+   font-family: Verdana, sans-serif;
+   src: url(./assets/fonts/Verdana.ttf);
+}
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   font-family: Verdana, Verdana, Arial, sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+   font-weight: normal;
+   background-image: url("assets/img/back.JPG");
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+}
+/* Как прижать footer к низу страницы: Cвойство justify-content определяет выравнивание элементов по главной оси. По умолчанию у flexbox главная ось горизонтальная и свойство justify-content выравнивает элементы по горизонтали. Но указав свойство flex-direction: column;, мы тем самым переопределили направление главной оси. Поэтому в данном случае justify-content определяет выравнивание по вертикали. Свойство justify-content: space-between; указывает, что все элементы размещаются на максимальном расстоянии друг от друга, крайние прижаты к границам родителя.*/
+* {
+   box-sizing: border-box;
+}
+/* .header,
+.main,
+.footer {
+   border: 1px solid red;
+} */
+
+/* Как любой блочный элемент, контейнер стремится занять всю ширину окна браузера. Так и происходит до тех пор, пока ширина окна не превышает 1440px, если окно браузера больше, свойство max-width ограничивает ширину контейнера. */
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+}
+
+/* Чтобы разместить все элементы навигации в строку, элементу .nav-list указываем свойство display: flex;, сдвинуть их вправо позволит свойство justify-content: flex-end;, выровнять по центру по высоте свойство align-items: center; */
+.footer .container,
+.nav-list,
+.contacts-list {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   list-style: none; /* Убираем стандартные маркеры: */
+   margin-top: 50px;
+   padding: 0px;
+}
+.nav-list {
+   margin-top: 20px;
+}
+
+/* Добавляем отступы между элементами списка: */
+.nav-link {
+   padding: 0 20px;
+   line-height: 50px;
+}
+
+.icon {
+   width: 60px;
+   height: 60px;
+   background: #b2c9d4;
+   /* box-shadow: 10px 10px 25px rgba(11, 74, 138, 0.25); */
+   padding: 5px;
+   border-radius: 25px;
+   box-shadow: 0px 0px 20px rgba(12, 61, 110, 0.9);
+   border: none;
+
+   transition: 0.3s;
+}
+.icon:hover {
+   opacity: 0.7;
+   transition: all 1s;
+   transform: scale(1.3);
+   box-shadow: 0px 0px 50px rgba(12, 61, 110, 0.9);
+}
+
+/* Якорные ссылки
+Каждой ссылке навигации укажите адрес, который начинается с решётки, а дальше идёт название раздела, на который она ведёт. Это якорные ссылки, при кликам по которым страница прокручивается до нужного раздела. Для этого разделам страницы необходимо указать id такие же, как и адреса ссылок в пунктах навигации.
+Чтобы прокрутка происходила плавно, в css-файл добавьте свойство */
+html {
+   scroll-behavior: smooth;
+}
+
+.avatar {
+   /* width: 300px; */
+   height: 300px;
+   border: 2px solid #c8c9c7;
+   border-radius: 100px;
+   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5), 0px 0px 100px rgba(0, 0, 0, 0.25);
+   margin: 10px;
+}
+.icon2 {
+   width: 2em;
+   height: 2em;
+   box-shadow: 10px 10px 25px rgba(11, 74, 138, 0.5);
+   border-radius: 15px;
+}
+
+.icon2:hover {
+   opacity: 0.7;
+   transition: all 0.5s;
+   transform: scale(1.5);
+}
+
+.logo-rss {
+   width: 100px;
+}
+
+/* Сетка страницы - взаимное расположение больших блоков, к которым относятся header, main и footer, а так же расположенные внутри main секции. Сейчас секции растягиваются по всей ширине страницы. Так как контента в них не очень много, это выглядит некрасиво. Расположим секции в две колонки. Для этого контейнеру секции main указываем дополнительный класс main-container и css-свойства.
+Свойство display: flex у контейнера размещает секции по горизонтали, свойство width: 50% у секций указывает, что каждая секция занимает ровно половину ширины контейнера, а благодаря свойству контейнера flex-wrap: wrap, секции, которые не помещаются по ширине контейнера переносятся на новую строку. */
+main .container {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.section {
+   width: 48%;
+
+   box-sizing: border-box;
+   /* background: #bbdcec; */
+   background: rgba(178, 185, 192, 0.87);
+   border-radius: 20px;
+   margin: 10px;
+   padding: 20px 10px 10px 10px;
+   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+}
+p {
+   padding: 0px 20px 0px 20px;
+}
+#profile.section {
+   display: flex;
+
+   background: none;
+   box-shadow: none;
+   justify-content: space-around;
+   align-items: center;
+   /* flex-direction: column; */
+
+   width: 100%;
+}
+/* #summary.section,
+#contacts.section {
+   display: flex;
+   flex-direction: column;
+   height: 50%;
+} */
+
+/* Указать, что при уменьшении ширины экрана до 768px, секция будет занимать всю ширину, позволит медиазапрос:
+/* Таким образом реализуется адаптивность веб-страницы - разное её отображение при разной ширине экрана */
+@media (max-width: 768px) {
+   .section {
+      width: 100%;
+   }
+}
+
+/* Стилизация заголовков */
+.name {
+   font-variant: small-caps;
+   font-weight: bold;
+   line-height: 1.5;
+   color: #0275a9;
+   margin: 10px 20px 0 0;
+   background: #b2c9d4;
+   padding: 20px 50px 20px 50px;
+   border-radius: 50px;
+   border: 2px solid #c8c9c7;
+   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+   text-align: center;
+}
+.name p {
+   font-size: medium;
+   text-decoration: underline;
+   color: #172024;
+}
+h1:hover {
+   text-decoration: double;
+   font-weight: 800;
+   transition: all 1s;
+   transform: scale(1.1);
+   animation: color-change 3s infinite;
+   color: #b33204;
+   cursor: none;
+   letter-spacing: 3px;
+}
+
+h2 {
+   text-align: center;
+   font-size: 110%;
+   background: #0583be76;
+   padding: 10px;
+   margin: 0 10px;
+   border-radius: 20px;
+   border: 2px solid #c8c9c7;
+}
+
+h2:hover {
+   background: #168bc2;
+   transition: all 1.5s;
+   letter-spacing: 5px;
+   cursor: none;
+}
+
+#contacts li {
+   list-style: none;
+}
+#courses li a {
+   text-decoration: none;
+}
+#courses li:hover {
+   text-decoration: underline;
+}
+
+#projects li a {
+   text-decoration: none;
+}
+
+#projects li:hover {
+   text-decoration: underline;
+}
+
+code {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   background: #c8c9c7;
+   margin: 10px;
+   padding: 40px 5px;
+   border-radius: 10px;
+   border-radius: 20px;
+}
