@@ -6,7 +6,7 @@ _Place of residence: Belarus, Brest_
 + [Instagram](https://www.instagram.com/sergey.dragoon/)
 + [GitHub](https://github.com/SiDgiF/)
 + [LinkedIn](https://www.linkedin.com/in/sergey-dragoon/)
-## About for me:
+## About me:
 I am a civil engineer by education.
 At this stage of my life, I decided to start exploring a new area for myself - programming. Personal qualities: honesty, decency, responsibility, purposefulness, ability to work in a team, desire for self-development, learning ability.
 ## My programming skills:
