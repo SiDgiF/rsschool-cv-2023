@@ -22,7 +22,7 @@ const coursesArea = document.querySelector('#courses');
 
 const experienceBtn = document.querySelector('.experience__btn');
 const experience = document.querySelector('.experience');
-const experienceArea = document.querySelector('#experience');
+const experienceArea = document.querySelector('#projects');
 
 const educationBtn = document.querySelector('.education__btn');
 const education = document.querySelector('.education');
@@ -70,6 +70,15 @@ codeArea.addEventListener('click', () => addRemove(code));
 
 coursesBtn.addEventListener('click', () => addRemove(courses));
 coursesArea.addEventListener('click', () => addRemove(courses));
+
+experienceBtn.addEventListener('click', () => addRemove(experience));
+experienceArea.addEventListener('click', () => addRemove(experience));
+
+educationBtn.addEventListener('click', () => addRemove(education));
+educationArea.addEventListener('click', () => addRemove(education));
+
+languagesBtn.addEventListener('click', () => addRemove(languages));
+languagesArea.addEventListener('click', () => addRemove(languages));
 
 
 
