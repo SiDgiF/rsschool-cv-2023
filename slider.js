@@ -1,8 +1,5 @@
 
-// const container = document.querySelector(".exp-list");
 const container = document.querySelector(".exp-list");
-
-
 
 const wrapper = document.querySelector(".wrapper");
 const ITEMS_NUMBER = container.children.length;
