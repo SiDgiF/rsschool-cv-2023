@@ -247,10 +247,12 @@ h2 {
 }
 
 .active {
+
    background: #0e5e46f1;
    /* border: 1px solid #8ac352; */
    box-shadow: inset -5px -5px 5px 0 rgba(0, 0, 0, 0.5), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5);
    /* letter-spacing: 5px; */
+
    cursor: none;
    /* transition: all 1s ease 0s; */
 
