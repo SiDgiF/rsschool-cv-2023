@@ -247,7 +247,6 @@ h2 {
 }
 
 .active {
-
    background: #0e5e46f1;
    /* border: 1px solid #8ac352; */
    box-shadow: inset -5px -5px 5px 0 rgba(0, 0, 0, 0.5), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5);
@@ -307,15 +306,6 @@ code {
    }
 }
 /* _____slider_____ */
-
-:root {
-   --container-width: 400px;
-   --visible-items: 4;
-}
-
-/* body {
-   background-color: #333;
-} */
 
 .slider {
    position: relative;
