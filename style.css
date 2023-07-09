@@ -17,9 +17,15 @@ body {
    background-attachment: fixed;
    background-size: 100% 100%;
 }
+
 /* Как прижать footer к низу страницы: Cвойство justify-content определяет выравнивание элементов по главной оси. По умолчанию у flexbox главная ось горизонтальная и свойство justify-content выравнивает элементы по горизонтали. Но указав свойство flex-direction: column;, мы тем самым переопределили направление главной оси. Поэтому в данном случае justify-content определяет выравнивание по вертикали. Свойство justify-content: space-between; указывает, что все элементы размещаются на максимальном расстоянии друг от друга, крайние прижаты к границам родителя.*/
 * {
-   box-sizing: border-box;
+   color: #172024;
+   /* transition: all 1s ease-out; */
+}
+
+a {
+   text-decoration-color: #172024;
 }
 /* .header,
 .main,
@@ -34,14 +40,21 @@ body {
 }
 
 /* Чтобы разместить все элементы навигации в строку, элементу .nav-list указываем свойство display: flex;, сдвинуть их вправо позволит свойство justify-content: flex-end;, выровнять по центру по высоте свойство align-items: center; */
-.footer .container,
+.footer .container {
+   display: flex;
+   justify-content: space-around;
+   max-width: 1440px;
+}
 .nav-list,
 .contacts-list {
    display: flex;
    justify-content: space-around;
+
    align-items: center;
    list-style: none; /* Убираем стандартные маркеры: */
-   margin-top: 50px;
+   margin-top: 60px;
+   margin-left: 20px;
+   margin-right: 20px;
    padding: 0px;
 }
 .nav-list {
@@ -55,22 +68,34 @@ body {
 }
 
 .icon {
-   width: 60px;
-   height: 60px;
+   width: 40px;
+   height: 40px;
    background: #b2c9d4;
    /* box-shadow: 10px 10px 25px rgba(11, 74, 138, 0.25); */
    padding: 5px;
    border-radius: 25px;
-   box-shadow: 0px 0px 20px rgba(12, 61, 110, 0.9);
+   box-shadow: 0px 0px 60px rgba(2, 23, 17, 0.9), inset -5px -5px 5px 0 rgba(0, 0, 0, 0.5),
+      inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5);
    border: none;
 
-   transition: 0.3s;
+   /* transition: 0.3s; */
+   transition: all 1s ease-out;
 }
 .icon:hover {
    opacity: 0.7;
    transition: all 1s;
    transform: scale(1.3);
-   box-shadow: 0px 0px 50px rgba(12, 61, 110, 0.9);
+   box-shadow: 0px 0px 20px rgba(3, 24, 16, 0.9), inset -5px -5px 5px 0 rgba(0, 0, 0, 0.5),
+      inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5);
+}
+
+.section:hover {
+   box-shadow: inset -5px -5px 5px 0 rgba(0, 0, 0, 0.5), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5),
+      0px 0px 50px rgba(12, 110, 72, 0.9);
+   transition: all 1s ease 0s;
+}
+.section {
+   transition: all 1s ease 0s;
 }
 
 /* Якорные ссылки
@@ -87,18 +112,22 @@ html {
    border-radius: 100px;
    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5), 0px 0px 100px rgba(0, 0, 0, 0.25);
    margin: 10px;
+   margin-left: 100px;
 }
 .icon2 {
-   width: 2em;
-   height: 2em;
-   box-shadow: 10px 10px 25px rgba(11, 74, 138, 0.5);
+   width: 1.5em;
+   height: 1.5em;
+   box-shadow: 2px 2px 30px rgba(11, 138, 47, 0.4), inset -3px -3px 3px 0 rgba(0, 0, 0, 0.5),
+      inset 3px 3px 3px 0 rgba(255, 255, 255, 0.5);
    border-radius: 15px;
+   padding: 7px;
+   transition: all 1s ease-out;
 }
 
 .icon2:hover {
    opacity: 0.7;
    transition: all 0.5s;
-   transform: scale(1.5);
+   transform: scale(1.4);
 }
 
 .logo-rss {
@@ -110,21 +139,23 @@ html {
 main .container {
    display: flex;
    flex-wrap: wrap;
+   justify-content: center;
 }
 
 .section {
-   width: 48%;
+   width: 40%;
 
    box-sizing: border-box;
    /* background: #bbdcec; */
    background: rgba(178, 185, 192, 0.87);
    border-radius: 20px;
-   margin: 10px;
+   margin: 15px 30px 15px 30px;
    padding: 20px 10px 10px 10px;
-   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+   box-shadow: inset -5px -5px 5px 0 rgba(0, 0, 0, 0.5), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5);
 }
-p {
+#summary p {
    padding: 0px 20px 0px 20px;
+   text-align: justify;
 }
 #profile.section {
    display: flex;
@@ -146,11 +177,11 @@ p {
 
 /* Указать, что при уменьшении ширины экрана до 768px, секция будет занимать всю ширину, позволит медиазапрос:
 /* Таким образом реализуется адаптивность веб-страницы - разное её отображение при разной ширине экрана */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
    .section {
       width: 100%;
    }
-}
+} */
 
 /* Стилизация заголовков */
 .name {
@@ -165,32 +196,41 @@ p {
    border: 2px solid #c8c9c7;
    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
    text-align: center;
+   margin-right: 50px;
 }
 .name p {
    font-size: medium;
    text-decoration: underline;
    color: #172024;
 }
+h1 {
+   transition: all 1s ease-out;
+}
+
 h1:hover {
    text-decoration: double;
    font-weight: 800;
-   transition: all 1s;
+   transition: all 1s linear;
    transform: scale(1.1);
    animation: color-change 3s infinite;
-   color: #b33204;
+   color: #0a423176;
    cursor: none;
-   letter-spacing: 3px;
+   letter-spacing: 2px;
 }
 
 h2 {
+   box-sizing: border-box;
    text-align: center;
    font-size: 110%;
-   background: #0583be76;
+   background: #0c7a5976;
    padding: 10px;
    margin: 0 10px;
    border-radius: 20px;
    border: 2px solid #c8c9c7;
+   transition: all 1s ease-out;
+   /* transition: all 2s ease-out; */
 }
+
 .summary:hover,
 .contact:hover,
 .skills:hover,
@@ -199,17 +239,27 @@ h2 {
 .experience:hover,
 .education:hover,
 .languages:hover {
-   background: #934022;
-   transition: all 1.5s;
+   background: #16906cf1;
+   transition: all 1s;
    letter-spacing: 5px;
    cursor: none;
+   box-shadow: inset -5px -5px 5px 0 rgba(0, 0, 0, 0.5), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5);
 }
 
 .active {
-   background: #934022;
-   transition: all 2s;
-   letter-spacing: 5px;
+
+   background: #0e5e46f1;
+   /* border: 1px solid #8ac352; */
+   box-shadow: inset -5px -5px 5px 0 rgba(0, 0, 0, 0.5), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5);
+   /* letter-spacing: 5px; */
+
    cursor: none;
+   /* transition: all 1s ease 0s; */
+
+   overflow: hidden;
+
+   white-space: nowrap;
+   animation: typing 1.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 #contacts li {
@@ -236,7 +286,82 @@ code {
    text-align: center;
    background: #c8c9c7;
    margin: 10px;
-   padding: 40px 5px;
+   padding: 60px 5px;
    border-radius: 10px;
    border-radius: 20px;
+}
+
+.name p {
+   overflow: hidden;
+
+   white-space: nowrap;
+   animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+   from {
+      width: 0;
+   }
+   to {
+      width: 100%;
+   }
+}
+/* _____slider_____ */
+
+:root {
+   --container-width: 400px;
+   --visible-items: 4;
+}
+
+/* body {
+   background-color: #333;
+} */
+
+.slider {
+   position: relative;
+   width: 522px;
+   height: 144px;
+   margin: 10px auto;
+   overflow: hidden;
+   border: 2px solid #c8c9c7;
+   border-radius: 20px;
+}
+
+.wrapper {
+   position: relative;
+   left: 0;
+   width: inherit;
+   height: inherit;
+}
+
+.exp-list {
+   position: absolute;
+   left: 0;
+   display: flex;
+   flex-wrap: nowrap;
+   width: inherit;
+   height: inherit;
+   transition: 3.5s linear;
+}
+
+.item {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 0;
+   width: calc(100% / 4);
+   /* height: inherit; */
+   /* margin: 5px 0px; */
+   border: 10px solid #c8c9c7;
+   /* border-radius: 20px; */
+}
+
+.item img {
+   border-radius: 15px;
+}
+
+.item a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
